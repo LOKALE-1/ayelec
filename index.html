@@ -3,157 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AYELEC - Africa Youth, Emerging Leaders and Entrepreneurs Convergence</title>
-    <meta name="description" content="AYELEC is a premier platform dedicated to bringing together Africa's youth, entrepreneurs, and leaders.">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
+    <title>AYELEC 2026 — Africa Youth, Emerging Leaders & Entrepreneurs Convergence</title>
+    <meta name="description" content="Join Africa's most powerful convergence of youth, leaders and entrepreneurs. 18 July 2026 · Vodaworld Events, Midrand, South Africa.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=7">
+    <link rel="stylesheet" href="css/style.css?v=15">
 </head>
 <body>
+
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">
-                <img src="images/ayelec_1.png" alt="AYELEC Logo" onerror="this.src='https://placehold.co/150x50/1A365D/FFFFFF?text=AYELEC'">
+            <a href="#home" class="logo">
+                <img src="images/ayelec_1.png" alt="AYELEC Logo" onerror="this.src='https://placehold.co/160x60/1A365D/FFFFFF?text=AYELEC'">
             </a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#audience">Audience</a></li>
-                <li><a href="#tickets" class="btn-primary">Buy Tickets</a></li>
+                <li><a href="#convergence">Why Attend</a></li>
+                <li><a href="#audience">Who Applies</a></li>
+                <li><a href="#voices">Speakers</a></li>
+                <li><a href="#tickets" class="nav-cta">Reserve Seat</a></li>
             </ul>
-            <div class="mobile-menu-toggle"><i class="fas fa-bars"></i></div>
+            <div class="mobile-menu-toggle" id="mobile-toggle"><i class="fas fa-bars"></i></div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ===== HERO — Split Layout ===== -->
     <header id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h1 class="hero-title">AFRICA YOUTH, EMERGING LEADERS AND ENTREPRENEURS CONVERGENCE</h1>
-            <h2 class="hero-theme">I AM AFRICA <br><span id="typewriter-text" class="highlight-type"></span><span class="cursor">|</span></h2>
-            
-            <div class="event-meta">
-                <div class="meta-item"><i class="far fa-calendar-alt"></i> 18 July 2026</div>
-                <div class="meta-item"><i class="fas fa-map-marker-alt"></i> Vodaworld Events, Noordwyk, Midrand</div>
-            </div>
 
-            <div class="countdown-container">
-                <div class="countdown-item">
-                    <span id="days">00</span>
-                    <span class="countdown-label">Days</span>
-                </div>
-                <div class="countdown-item">
-                    <span id="hours">00</span>
-                    <span class="countdown-label">Hours</span>
-                </div>
-                <div class="countdown-item">
-                    <span id="minutes">00</span>
-                    <span class="countdown-label">Minutes</span>
-                </div>
-                <div class="countdown-item">
-                    <span id="seconds">00</span>
-                    <span class="countdown-label">Seconds</span>
-                </div>
+        <!-- LEFT: White text panel -->
+        <div class="hero-left">
+            <h1 class="hero-title">
+                AFRICA YOUTH,<br>
+                EMERGING LEADERS<br>
+                &amp; ENTREPRENEURS<br>
+                CONVERGENCE
+            </h1>
+            <p class="hero-theme-line">
+                I AM AFRICA &mdash;
+                <span id="typewriter-text" class="hero-typewriter"></span><span class="cursor">|</span>
+            </p>
+            <p class="hero-sub">
+                Where Africa's SMEs, entrepreneurs and emerging leaders converge to showcase solutions, unlock markets and build the partnerships that scale our economies.
+            </p>
+            <div class="hero-ctas">
+                <a href="#tickets" class="btn-hero-primary pulse">Reserve Your Seat</a>
+                <a href="#about" class="btn-hero-ghost">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
-
-            <a href="#tickets" class="btn-primary btn-large pulse">Register Now</a>
         </div>
+
+        <!-- RIGHT: White panel with logo + event info + countdown -->
+        <div class="hero-right">
+            <canvas id="hero-canvas"></canvas>
+            <div class="hero-right-inner">
+                <img src="images/ayelec_1.png" alt="AYELEC Logo" class="hero-logo-large" onerror="this.style.display='none'">
+
+                <div class="hero-event-details">
+                    <div class="event-detail-item">
+                        <i class="far fa-calendar-alt"></i>
+                        <div>
+                            <p class="detail-label">DATE</p>
+                            <p class="detail-value">18 July 2026</p>
+                        </div>
+                    </div>
+                    <div class="event-detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p class="detail-label">VENUE</p>
+                            <p class="detail-value">Vodaworld Events, Midrand</p>
+                        </div>
+                    </div>
+                    <div class="event-detail-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <p class="detail-label">FORMAT</p>
+                            <p class="detail-value">In-Person &amp; Hybrid</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="countdown-container">
+                    <div class="countdown-inner">
+                        <div class="countdown-item">
+                            <span id="days" class="countdown-num cd-days">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="hours" class="countdown-num cd-hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="minutes" class="countdown-num cd-minutes">00</span>
+                            <span class="countdown-label">Mins</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="seconds" class="countdown-num cd-seconds">00</span>
+                            <span class="countdown-label">Secs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </header>
 
-    <!-- About Section -->
+    <!-- ===== ABOUT — "Your Business. Scaled." ===== -->
     <section id="about" class="about-section">
         <div class="container">
-            <div class="section-title text-center">
-                <h2>United in Diversity. Driven by Purpose. Committed to Africa's Future.</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="about-grid">
-                <div class="about-card">
-                    <i class="fas fa-link icon-blue"></i>
-                    <h3>Connect</h3>
-                    <p>Intergenerational dialogue and strategic collaboration across the continent.</p>
+            <div class="lovable-split-grid">
+                <div class="split-content" data-aos="fade-right">
+                    <span class="feature-pill">About The Convergence</span>
+                    <h2>United in Diversity.<br>Driven by Purpose.</h2>
+                    <p>AYELEC is a premier platform bringing together Africa's youth, entrepreneurs, business leaders, policymakers, investors, faith organisations, development partners and enterprises to engage on matters of leadership, entrepreneurship, innovation, collaboration, sustainable development and economic transformation.</p>
+                    <ul class="lovable-feature-list">
+                        <li><span class="list-dot" style="background:var(--accent-green)"></span> Intergenerational dialogue across the continent</li>
+                        <li><span class="list-dot" style="background:var(--accent-orange)"></span> Leadership development for youth & emerging leaders</li>
+                        <li><span class="list-dot" style="background:var(--accent-purple)"></span> Knowledge exchange & social innovation</li>
+                        <li><span class="list-dot" style="background:var(--accent-red)"></span> Building a prosperous, ethical Africa</li>
+                    </ul>
                 </div>
-                <div class="about-card">
-                    <i class="fas fa-hands-helping icon-green"></i>
-                    <h3>Empower</h3>
-                    <p>Leadership development for youth and emerging leaders.</p>
-                </div>
-                <div class="about-card">
-                    <i class="fas fa-lightbulb icon-orange"></i>
-                    <h3>Innovate</h3>
-                    <p>Knowledge exchange and social innovation for sustainable development.</p>
-                </div>
-                <div class="about-card">
-                    <i class="fas fa-star icon-purple"></i>
-                    <h3>Leave a Legacy</h3>
-                    <p>Building a prosperous, ethical, and sustainable Africa.</p>
+                <div class="split-image" data-aos="fade-left">
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=2069&auto=format&fit=crop" alt="African Leaders at AYELEC">
+                        <div class="image-frame-badge">
+                            <i class="fas fa-map-marker-alt"></i> Vodaworld, Midrand
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ===== CONVERGENCE PILLARS ===== -->
+    <section id="convergence" class="convergence-section">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="feature-pill">Why Attend</span>
+                <h2>What This Convergence Will Do</h2>
+                <p>A platform shaping a connected, collaborative, future-forward Africa — built for businesses driving real economic growth.</p>
+            </div>
+            <div class="pillars-grid">
+                <div class="pillar-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="pillar-number">01</div>
+                    <div class="pillar-icon" style="background: linear-gradient(135deg,#1A365D,#2A528A)"><i class="fas fa-rocket"></i></div>
+                    <h3>Showcase</h3>
+                    <p>Bring African innovations, enterprises & SME solutions to the market. Display your products on a continental stage.</p>
+                </div>
+                <div class="pillar-card" data-aos="fade-up" data-aos-delay="80">
+                    <div class="pillar-number">02</div>
+                    <div class="pillar-icon" style="background: linear-gradient(135deg,#38A169,#276749)"><i class="fas fa-globe-africa"></i></div>
+                    <h3>Scale</h3>
+                    <p>Cross-border learning, scalability & sustainable growth. Take your idea beyond borders with the right networks.</p>
+                </div>
+                <div class="pillar-card" data-aos="fade-up" data-aos-delay="160">
+                    <div class="pillar-number">03</div>
+                    <div class="pillar-icon" style="background: linear-gradient(135deg,#DD6B20,#C05621)"><i class="fas fa-handshake"></i></div>
+                    <h3>Connect</h3>
+                    <p>Strategic partnerships & intercontinental investor networks. Curated matchmaking with corporates and government.</p>
+                </div>
+                <div class="pillar-card" data-aos="fade-up" data-aos-delay="240">
+                    <div class="pillar-number">04</div>
+                    <div class="pillar-icon" style="background: linear-gradient(135deg,#805AD5,#6B46C1)"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Learn</h3>
+                    <p>Masterclasses with industry leaders, policymakers and serial entrepreneurs. Walk away equipped to grow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- ===== CAROUSEL ===== -->
+    <div class="carousel-section">
+        <p class="carousel-label">Participants from across the continent</p>
+        <div class="carousel-track-container">
+            <div class="carousel-track" id="carousel-track"></div>
         </div>
     </div>
 
-    <!-- Carousel Section -->
-    <div class="carousel-section">
-        <div class="carousel-track-container">
-            <div class="carousel-track" id="carousel-track">
-                <!-- Flags will be populated by JS -->
-            </div>
-
-    <!-- Audience Section -->
-    <section id="audience" class="audience-section bg-light">
+    <!-- ===== WHO SHOULD ATTEND ===== -->
+    <section id="audience" class="audience-section">
         <div class="container">
-            <div class="section-title text-center">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="feature-pill">Who Should Apply</span>
                 <h2>Who Should Attend?</h2>
-                <div class="divider"></div>
                 <p>The convergence will bring together a diverse and influential audience.</p>
             </div>
-            
             <div class="audience-grid">
-                <div class="audience-item color-darkblue">
+                <div class="audience-item color-darkblue" data-aos="fade-up" data-aos-delay="0">
                     <div class="item-number">01</div>
                     <div class="item-text">Government Officials & Public Sector Leaders</div>
                 </div>
-                <div class="audience-item color-lightblue">
+                <div class="audience-item color-lightblue" data-aos="fade-up" data-aos-delay="40">
                     <div class="item-number">02</div>
                     <div class="item-text">Policymakers & Development Practitioners</div>
                 </div>
-                <div class="audience-item color-green">
+                <div class="audience-item color-green" data-aos="fade-up" data-aos-delay="80">
                     <div class="item-number">03</div>
                     <div class="item-text">Youth Leaders & Emerging Leaders</div>
                 </div>
-                <div class="audience-item color-orange">
+                <div class="audience-item color-orange" data-aos="fade-up" data-aos-delay="120">
                     <div class="item-number">04</div>
                     <div class="item-text">Entrepreneurs, Business Owners & Execs</div>
                 </div>
-                <div class="audience-item color-red">
+                <div class="audience-item color-red" data-aos="fade-up" data-aos-delay="160">
                     <div class="item-number">05</div>
                     <div class="item-text">Industry Vanguards & Captains of Industry</div>
                 </div>
-                <div class="audience-item color-purple">
+                <div class="audience-item color-purple" data-aos="fade-up" data-aos-delay="200">
                     <div class="item-number">06</div>
                     <div class="item-text">Thought Leaders, Researchers & Academics</div>
                 </div>
-                <div class="audience-item color-darkblue">
+                <div class="audience-item color-darkblue" data-aos="fade-up" data-aos-delay="240">
                     <div class="item-number">07</div>
                     <div class="item-text">Civil Society & Faith-based Institutions</div>
                 </div>
-                <div class="audience-item color-lightblue">
+                <div class="audience-item color-lightblue" data-aos="fade-up" data-aos-delay="280">
                     <div class="item-number">08</div>
                     <div class="item-text">Community Leaders & Social Innovators</div>
                 </div>
-                <div class="audience-item color-green">
+                <div class="audience-item color-green" data-aos="fade-up" data-aos-delay="320">
                     <div class="item-number">09</div>
                     <div class="item-text">Students, Graduates & Aspiring Entrepreneurs</div>
                 </div>
-                <div class="audience-item color-orange">
+                <div class="audience-item color-orange" data-aos="fade-up" data-aos-delay="360">
                     <div class="item-number">10</div>
                     <div class="item-text">Local, Regional & International Stakeholders</div>
                 </div>
@@ -161,90 +232,233 @@
         </div>
     </section>
 
-    <!-- Tickets Section -->
-    <section id="tickets" class="tickets-section">
+    <!-- ===== VOICES ON STAGE ===== -->
+    <section id="voices" class="voices-section">
         <div class="container">
-            <div class="section-title text-center">
-                <h2>Get Your Tickets</h2>
-                <div class="divider"></div>
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="feature-pill">Voices On Stage</span>
+                <h2>Meet The Speakers</h2>
             </div>
-            
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="card-header bg-green">
-                        <h3>Online / In-Person Delegates</h3>
+            <div class="speakers-grid">
+                <div class="speaker-card" data-aos="fade-up">
+                    <div class="speaker-img-wrap">
+                        <img src="https://placehold.co/300x300/1A365D/FFFFFF?text=AA" alt="Ahmed Ahmod">
+                        <div class="speaker-glow"></div>
                     </div>
-                    <div class="card-body">
-                        <div class="price">R3500</div>
-                        <ul class="features">
-                            <li><i class="fas fa-check"></i> Full Event Access</li>
-                            <li><i class="fas fa-check"></i> Networking Opportunities</li>
-                            <li><i class="fas fa-check"></i> Event Materials</li>
-                        </ul>
-                        <button class="btn-primary w-100" onclick="openModal('modal-delegate')">Register Now</button>
+                    <div class="speaker-info">
+                        <h3>Ahmed Ahmod</h3>
+                        <p class="speaker-role">Chief Elephant Officer · Human Skills Trainer · Leadership Strategist</p>
+                        <p class="speaker-bio">A dynamic leadership coach and business strategist dedicated to helping individuals and organizations unlock their full potential.</p>
+                        <div class="speaker-tags">
+                            <span>Leadership</span>
+                            <span>Strategy</span>
+                            <span>Growth</span>
+                        </div>
                     </div>
                 </div>
-
-                <div class="pricing-card">
-                    <div class="card-header bg-blue">
-                        <h3>Exhibitors</h3>
-                        <p class="subtitle">(Desk and Pop Up Banner Only)</p>
-                    </div>
-                    <div class="card-body">
-                        <div class="price">R2000</div>
-                        <ul class="features">
-                            <li><i class="fas fa-check"></i> Exhibition Space</li>
-                            <li><i class="fas fa-check"></i> Brand Visibility</li>
-                            <li><i class="fas fa-check"></i> Networking Opportunities</li>
-                        </ul>
-                        <button class="btn-primary w-100" onclick="openModal('modal-exhibitor')">Register Now</button>
+                <!-- More speakers coming soon -->
+                <div class="speaker-card speaker-tba" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tba-content">
+                        <i class="fas fa-user-plus"></i>
+                        <p>More Speakers<br>Coming Soon</p>
                     </div>
                 </div>
-            </div>
-            
-            <div class="networking-alert">
-                <i class="fas fa-glass-cheers"></i>
-                <p><strong>Private Networking Session (Business Connect Session)</strong><br>Available at an additional cost after the day programme. Select this add-on during registration.</p>
+                <div class="speaker-card speaker-tba" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tba-content">
+                        <i class="fas fa-user-plus"></i>
+                        <p>More Speakers<br>Coming Soon</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===== TICKETS ===== -->
+    <section id="tickets" class="tickets-section">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="feature-pill">Secure Your Seat</span>
+                <h2>Be In The Room</h2>
+                <p>Be in the room where Africa's next chapter is written.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="pricing-top" style="background: linear-gradient(135deg,#38A169,#276749)">
+                        <h3>Delegate</h3>
+                        <p class="pricing-sub">Online / In-Person</p>
+                        <div class="price">R3,500</div>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Full-day event access</li>
+                        <li><i class="fas fa-check"></i> Lunch & refreshments</li>
+                        <li><i class="fas fa-check"></i> Networking lounge</li>
+                        <li><i class="fas fa-check"></i> Event materials</li>
+                    </ul>
+                    <button class="btn-ticket btn-green" onclick="openModal('modal-delegate')">Register Now</button>
+                </div>
+
+                <div class="pricing-card pricing-featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="pricing-top" style="background: linear-gradient(135deg,#1A365D,#2A528A)">
+                        <h3>Exhibitor</h3>
+                        <p class="pricing-sub">Desk & Pop-Up Banner</p>
+                        <div class="price">R2,000</div>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Exhibition space</li>
+                        <li><i class="fas fa-check"></i> Brand visibility</li>
+                        <li><i class="fas fa-check"></i> Networking opportunities</li>
+                        <li><i class="fas fa-check"></i> Delegate access included</li>
+                    </ul>
+                    <button class="btn-ticket btn-blue" onclick="openModal('modal-exhibitor')">Register Now</button>
+                </div>
+
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-top" style="background: linear-gradient(135deg,#805AD5,#6B46C1)">
+                        <h3>Business Connect</h3>
+                        <p class="pricing-sub">Private Networking Add-on</p>
+                        <div class="price">Add-on</div>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> VIP lounge access</li>
+                        <li><i class="fas fa-check"></i> Speaker meet & greet</li>
+                        <li><i class="fas fa-check"></i> Investor matchmaking</li>
+                        <li><i class="fas fa-check"></i> After-programme session</li>
+                    </ul>
+                    <button class="btn-ticket btn-purple" onclick="openModal('modal-delegate')">Enquire Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PARTNERS ===== -->
+    <section id="partners" class="partners-section">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="feature-pill">Our Network</span>
+                <h2>Partners &amp; Supporters</h2>
+                <p>We are proud to collaborate with organisations driving Africa's growth and transformation.</p>
+            </div>
+
+            <div class="partners-categories">
+                <!-- Host -->
+                <div class="partner-tier" data-aos="fade-up">
+                    <p class="tier-label">Hosted By</p>
+                    <div class="partner-logos tier-host">
+                        <div class="partner-logo-card">
+                            <img src="images/bgeg_logo.png" alt="Bakgethilweng Global Experts Group" onerror="this.parentElement.innerHTML='<span class=partner-name>Bakgethilweng Global Experts Group</span>'">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="tier-divider"></div>
+
+                <!-- Partners -->
+                <div class="partner-tier" data-aos="fade-up" data-aos-delay="80">
+                    <p class="tier-label">Strategic Partners</p>
+                    <div class="partner-logos">
+                        <div class="partner-logo-card partner-placeholder">
+                            <i class="fas fa-handshake"></i>
+                            <span>Your Logo Here</span>
+                        </div>
+                        <div class="partner-logo-card partner-placeholder">
+                            <i class="fas fa-handshake"></i>
+                            <span>Your Logo Here</span>
+                        </div>
+                        <div class="partner-logo-card partner-placeholder">
+                            <i class="fas fa-handshake"></i>
+                            <span>Your Logo Here</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="tier-divider"></div>
+
+                <!-- Sponsors -->
+                <div class="partner-tier" data-aos="fade-up" data-aos-delay="160">
+                    <p class="tier-label">Sponsors &amp; Supporters</p>
+                    <div class="partner-logos">
+                        <div class="partner-logo-card partner-placeholder">
+                            <i class="fas fa-star"></i>
+                            <span>Your Logo Here</span>
+                        </div>
+                        <div class="partner-logo-card partner-placeholder">
+                            <i class="fas fa-star"></i>
+                            <span>Your Logo Here</span>
+                        </div>
+                        <div class="partner-logo-card partner-placeholder">
+                            <i class="fas fa-star"></i>
+                            <span>Your Logo Here</span>
+                        </div>
+                        <div class="partner-logo-card partner-placeholder">
+                            <i class="fas fa-star"></i>
+                            <span>Your Logo Here</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Become a partner CTA -->
+            <div class="partner-cta" data-aos="fade-up">
+                <div class="partner-cta-inner">
+                    <div>
+                        <h3>Become a Partner</h3>
+                        <p>Align your brand with Africa's most impactful leadership and entrepreneurship platform.</p>
+                    </div>
+                    <a href="https://wa.me/27635390401?text=Hi,%20I%20am%20interested%20in%20partnering%20with%20AYELEC%202026" target="_blank" class="btn-hero-primary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <p style="color: rgba(255,255,255,0.7); margin-bottom: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Hosted By</p>
-                <img src="images/bgeg_logo.png" alt="BGEG Logo" class="footer-logo" onerror="this.src='https://placehold.co/250x70/FFFFFF/000000?text=BGEG+Host'">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <img src="images/ayelec_1.png" alt="AYELEC Logo" class="footer-ayelec-logo" onerror="this.style.display='none'">
+                <p>Africa Youth, Emerging Leaders<br>and Entrepreneurs Convergence</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>Contact Us</h4>
-                <p><i class="fab fa-whatsapp"></i> +27 063 539 0401 (To Register)</p>
+            <div class="footer-hosted">
+                <p class="hosted-label">Hosted By</p>
+                <img src="images/bgeg_logo.png" alt="BGEG Logo" class="footer-logo" onerror="this.src='https://placehold.co/200x60/1A365D/FFFFFF?text=BGEG'">
             </div>
-            <div class="footer-col">
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/27635390401">+27 63 539 0401</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@ayelec.net">info@ayelec.net</a></p>
+            </div>
+            <div class="footer-bank">
                 <h4>Bank Details</h4>
                 <p><strong>First National Bank</strong></p>
-                <p>Acc no: 6315431100</p>
-                <p>Branch: 204809</p>
-                <p>Swift Code: FIRNZAJJ</p>
+                <p>Acc: 6315431100</p>
+                <p>Branch: 204809 · SWIFT: FIRNZAJJ</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 AYELEC. All Rights Reserved.</p>
+            <p>© 2026 AYELEC. All Rights Reserved. · Powered by Bakgethilweng Global Experts Group</p>
         </div>
     </footer>
 
-    <!-- Modals for Registration -->
+    <!-- Modals -->
     <div id="modal-delegate" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-delegate')">&times;</span>
             <h2>Delegate Registration</h2>
-            <p>To register, please send your proof of payment via WhatsApp.</p>
+            <p>Make payment and send proof via WhatsApp to confirm your seat.</p>
             <div class="bank-details-box">
                 <p><strong>First National Bank</strong></p>
-                <p>Acc no: 6315431100</p>
-                <p>Amount: R3500</p>
+                <p>Acc no: 6315431100 · Branch: 204809</p>
+                <p>Amount: <strong>R3,500</strong></p>
             </div>
-            <a href="https://wa.me/270635390401?text=Hi,%20I%20would%20like%20to%20register%20as%20a%20Delegate%20for%20AYELEC%202026" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Register via WhatsApp</a>
+            <a href="https://wa.me/27635390401?text=Hi,%20I%20would%20like%20to%20register%20as%20a%20Delegate%20for%20AYELEC%202026" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Register via WhatsApp</a>
         </div>
     </div>
 
@@ -252,17 +466,16 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-exhibitor')">&times;</span>
             <h2>Exhibitor Registration</h2>
-            <p>To register, please send your proof of payment via WhatsApp.</p>
+            <p>Make payment and send proof via WhatsApp to confirm your space.</p>
             <div class="bank-details-box">
                 <p><strong>First National Bank</strong></p>
-                <p>Acc no: 6315431100</p>
-                <p>Amount: R2000</p>
+                <p>Acc no: 6315431100 · Branch: 204809</p>
+                <p>Amount: <strong>R2,000</strong></p>
             </div>
-            <a href="https://wa.me/270635390401?text=Hi,%20I%20would%20like%20to%20register%20as%20an%20Exhibitor%20for%20AYELEC%202026" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Register via WhatsApp</a>
+            <a href="https://wa.me/27635390401?text=Hi,%20I%20would%20like%20to%20register%20as%20an%20Exhibitor%20for%20AYELEC%202026" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Register via WhatsApp</a>
         </div>
     </div>
 
-    <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>
 </html>
