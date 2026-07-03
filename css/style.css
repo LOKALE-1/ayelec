@@ -472,12 +472,13 @@ img { max-width: 100%; }
     position: relative;
     border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 30px 80px rgba(26,54,93,0.2);
+    box-shadow: 0 30px 80px rgba(26,54,93,0.15);
+    background: #ffffff;
 }
 .image-frame img { 
     width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
+    max-height: 450px; 
+    object-fit: contain; 
     display: block; 
 }
 .image-frame::before {
