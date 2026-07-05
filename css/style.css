@@ -699,7 +699,7 @@ img { max-width: 100%; }
 .tickets-section { padding: 120px 0; background: var(--bg-light); }
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     align-items: start;
 }
